@@ -44,6 +44,7 @@ export default {
         destructive: {
           DEFAULT: withAlpha("--destructive"),
         },
+        "apple-gray": "#86868B",
         border: withAlpha("--border"),
         input: withAlpha("--input"),
         ring: withAlpha("--ring"),
@@ -66,6 +67,28 @@ export default {
       },
       ringWidth: {
         3: "3px",
+      },
+      transitionTimingFunction: {
+        apple: "cubic-bezier(0.16, 1, 0.3, 1)",
+      },
+      keyframes: {
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(14px)" },
+          to: { opacity: "1", transform: "none" },
+        },
+        flow: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(400%)" },
+        },
+        caret: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
+        flow: "flow 2.6s cubic-bezier(0.65, 0, 0.35, 1) infinite",
+        caret: "caret 1s steps(1) infinite",
       },
     },
   },

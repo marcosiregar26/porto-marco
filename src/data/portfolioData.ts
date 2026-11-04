@@ -17,6 +17,43 @@ export interface ExperienceItem {
   techUsed: string[];
 }
 
+export interface Profile {
+  name: string;
+  shortName: string;
+  role: string;
+  education: string;
+  summary: string;
+  email: string;
+  githubUrl: string;
+  githubHandle: string;
+  linkedinUrl: string;
+  instagramUrl: string;
+  instagramHandle: string;
+  /**
+   * Nomor WhatsApp format internasional tanpa "+" / spasi, contoh: "6281234567890".
+   * Tombol WhatsApp otomatis disembunyikan selama nilai ini kosong.
+   */
+  whatsappNumber: string;
+  cvUrl: string;
+}
+
+export const PROFILE: Profile = {
+  name: "Marco Siregar",
+  shortName: "Marco",
+  role: "Full-Stack Web Developer",
+  education: "Mahasiswa S1 Informatika",
+  summary:
+    "Membangun aplikasi web end-to-end yang cepat, rapi, dan skalabel — mulai dari perancangan REST API dan relasi database MySQL dengan Sequelize, hingga antarmuka modern dengan React & TypeScript.",
+  email: "chrissrgr2611@gmail.com",
+  githubUrl: "https://github.com/marcosiregar26",
+  githubHandle: "marcosiregar26",
+  linkedinUrl: "https://linkedin.com/in/marcosiregar",
+  instagramUrl: "https://www.instagram.com/marccsrg/",
+  instagramHandle: "marccsrg",
+  whatsappNumber: "",
+  cvUrl: "/cv-marco.pdf",
+};
+
 export const TECH_STACK = [
   { name: "React", category: "Frontend" },
   { name: "TypeScript", category: "Language" },
